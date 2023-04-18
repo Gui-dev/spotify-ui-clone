@@ -1,90 +1,155 @@
 import Link from "next/link"
-import { ChevronLeft, ChevronRight, Home as HomeIcon, Library, Search } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
+import Image from "next/image"
+import { Menu } from "@/components/Menu"
 
 export default function Home () {
   return (
     <div className="flex flex-col h-screen">
       <div className="flex flex-1">
-        <aside className="p-6 w-72 bg-zinc-950">
-          <nav className="space-y-5">
-            <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-zinc-200 hover:text-zinc-400">
-              <HomeIcon />
-              Home
-            </Link>
-            <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-zinc-200 hover:text-zinc-400">
-              <Search />
-              Search
-            </Link>
-            <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-zinc-200 hover:text-zinc-400">
-              <Library />
-              Your Library
-            </Link>
-          </nav>
 
-          <nav className="flex flex-col gap-3 pt-6 mt-6 border-t border-zinc-800">
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Black Sabbath
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Metallica
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Slayer
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is System of a Down
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Sepultura
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Aerosmith
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Ratos de Porão
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Krisium
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Brujeria
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Dead Fish
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Placebo
-            </Link>
-            {/* <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Iron Maiden
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Joy Division
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is The Smiths
-            </Link>
-            <Link href="/" className="text-sm font-semibold text-zinc-400 hover:text-zinc-100">
-              This is Linkin Park
-            </Link> */}
-          </nav>
+        <Menu />
 
-        </aside>
         <main className="flex-1 p-6">
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className="w-6 h-6 bg-black/20 rounded-full"
+              className="bg-black/40 rounded-full p-1"
             >
               <ChevronLeft />
             </button>
             <button
               type="button"
-              className="w-6 h-6 bg-black/20 rounded-full"
+              className="bg-black/40 rounded-full p-1"
             >
               <ChevronRight />
             </button>
           </div>
+          <h1 className="text-3xl font-semibold mt-10">Good Afternoon</h1>
+
+          <div className="grid grid-cols-3 gap-6 mt-4">
+            <Link href="/" className="flex items-center gap-4 bg-white/5 rounded overflow-hidden hover:bg-white/10 transition-colors group">
+              <Image src="/album.jpeg" alt="Capa do album Black Sabbath 13" width={104} height={104} />
+              <strong>This is Black Sabbath</strong>
+              <button
+                type="button"
+                className="flex items-center justify-center text-black mr-4 ml-auto p-2 bg-green-400 rounded-full invisible group-hover:visible"
+              >
+                <Play />
+              </button>
+            </Link>
+            <Link href="/" className="flex items-center gap-4 bg-white/5 rounded overflow-hidden hover:bg-white/10 transition-colors group">
+              <Image src="/album.jpeg" alt="Capa do album Black Sabbath 13" width={104} height={104} />
+              <strong>This is Black Sabbath</strong>
+              <button
+                type="button"
+                className="flex items-center justify-center text-black mr-4 ml-auto p-2 bg-green-400 rounded-full invisible group-hover:visible"
+              >
+                <Play />
+              </button>
+            </Link>
+            <Link href="/" className="flex items-center gap-4 bg-white/5 rounded overflow-hidden hover:bg-white/10 transition-colors group">
+              <Image src="/album.jpeg" alt="Capa do album Black Sabbath 13" width={104} height={104} />
+              <strong>This is Black Sabbath</strong>
+              <button
+                type="button"
+                className="flex items-center justify-center text-black mr-4 ml-auto p-2 bg-green-400 rounded-full invisible group-hover:visible"
+              >
+                <Play />
+              </button>
+            </Link>
+            <Link href="/" className="flex items-center gap-4 bg-white/5 rounded overflow-hidden hover:bg-white/10 transition-colors group">
+              <Image src="/album.jpeg" alt="Capa do album Black Sabbath 13" width={104} height={104} />
+              <strong>This is Black Sabbath</strong>
+              <button
+                type="button"
+                className="flex items-center justify-center text-black mr-4 ml-auto p-2 bg-green-400 rounded-full invisible group-hover:visible"
+              >
+                <Play />
+              </button>
+            </Link>
+            <Link href="/" className="flex items-center gap-4 bg-white/5 rounded overflow-hidden hover:bg-white/10 transition-colors group">
+              <Image src="/album.jpeg" alt="Capa do album Black Sabbath 13" width={104} height={104} />
+              <strong>This is Black Sabbath</strong>
+              <button
+                type="button"
+                className="flex items-center justify-center text-black mr-4 ml-auto p-2 bg-green-400 rounded-full invisible group-hover:visible"
+              >
+                <Play />
+              </button>
+            </Link>
+            <Link href="/" className="flex items-center gap-4 bg-white/5 rounded overflow-hidden hover:bg-white/10 transition-colors group">
+              <Image src="/album.jpeg" alt="Capa do album Black Sabbath 13" width={104} height={104} />
+              <strong>This is Black Sabbath</strong>
+              <button
+                type="button"
+                className="flex items-center justify-center text-black mr-4 ml-auto p-2 bg-green-400 rounded-full invisible group-hover:visible"
+              >
+                <Play />
+              </button>
+            </Link>
+          </div>
+
+          <h2 className="text-2xl font-semibold mt-10">Made for Gui Silva</h2>
+
+          <div className="grid grid-cols-5 gap-4 mt-4">
+            <Link href="/" className="flex flex-col gap-2 p-3 bg-white/5 rounded-md hover:bg-white/10">
+              <Image
+                src="/album.jpeg"
+                alt="Capa do album Black Sabbath 13"
+                width={104}
+                height={104}
+                className="w-full"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-500">Sepultura, Metallica and more</span>
+            </Link>
+            <Link href="/" className="flex flex-col gap-2 p-3 bg-white/5 rounded-md hover:bg-white/10">
+              <Image
+                src="/album.jpeg"
+                alt="Capa do album Black Sabbath 13"
+                width={104}
+                height={104}
+                className="w-full"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-500">Sepultura, Metallica and more</span>
+            </Link>
+            <Link href="/" className="flex flex-col gap-2 p-3 bg-white/5 rounded-md hover:bg-white/10">
+              <Image
+                src="/album.jpeg"
+                alt="Capa do album Black Sabbath 13"
+                width={104}
+                height={104}
+                className="w-full"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-500">Sepultura, Metallica and more</span>
+            </Link>
+            <Link href="/" className="flex flex-col gap-2 p-3 bg-white/5 rounded-md hover:bg-white/10">
+              <Image
+                src="/album.jpeg"
+                alt="Capa do album Black Sabbath 13"
+                width={104}
+                height={104}
+                className="w-full"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-500">Sepultura, Metallica and more</span>
+            </Link>
+            <Link href="/" className="flex flex-col gap-2 p-3 bg-white/5 rounded-md hover:bg-white/10">
+              <Image
+                src="/album.jpeg"
+                alt="Capa do album Black Sabbath 13"
+                width={104}
+                height={104}
+                className="w-full"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-500">Sepultura, Metallica and more</span>
+            </Link>
+          </div>
+
         </main>
       </div>
 
